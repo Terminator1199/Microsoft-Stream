@@ -122,7 +122,7 @@ export default function Navbar() {
       <nav className="app__navbar">
         <div className="app__navbar-left row-xl ">
           <Link to="/">
-            <div className="app__navbar-brand ">
+            <div className="app__navbar-brand">
               <img src={brandLogo} alt="Microsoft Stream" />
             </div>
           </Link>

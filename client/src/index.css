@@ -7,7 +7,7 @@ body {
   --font-base: "Poppins", sans-serif;
   --font-alt: "Open Sans", sans-serif;
 
-  --color-black: rgb(10, 7, 11);
+  --color-black: #090931;
   --color-red: #0aa1dd;
 }
 a {
