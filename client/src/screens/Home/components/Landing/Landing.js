@@ -20,7 +20,7 @@ export default function Landing() {
 
           <p className="text__subtitle landing__hero-bottom">
             Enjoy exclusive Music Video popular movies and Live shows. Subscribe
-            BD Screen now{" "}
+            Microsoft Stream now{" "}
           </p>
           <div className="landing-nav ">
             <div className="landing-nav-left">

@@ -13,13 +13,19 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.signin__logo{
+  /* position:absolute;
+  z-index: 10px; */
+  display: flex;
+  padding: 1rem;
+}
 .signin__form-wrapper {
   position: absolute;
   margin: auto;
-  top: 100px;
+  top: 50px;
   z-index: 100;
   width: 500px;
-  height: 650px;
+  height: 680px;
   background-color: rgba(0, 0, 0, 0.75);
   padding: 5rem 1.5rem;
 }

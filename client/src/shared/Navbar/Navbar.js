@@ -22,10 +22,10 @@ import "./Navbar.css";
 import TheaterComedy from "@mui/icons-material/TheaterComedy";
 
 const NAV_LINKS = [
-  {
-    icon: <HomeIcon />,
-    name: "Home",
-  },
+  // {
+  //   icon: <HomeIcon />,
+  //   name: "Home",
+  // },
   // {
   //   icon: <TheatersIcon />,
   //   name: "Movie",
@@ -123,7 +123,7 @@ export default function Navbar() {
         <div className="app__navbar-left row-xl ">
           <Link to="/">
             <div className="app__navbar-brand ">
-              <img src={brandLogo} alt="netflix" />
+              <img src={brandLogo} alt="Microsoft Stream" />
             </div>
           </Link>
           <Dropdown className="mx-2 nav__dropdown">

@@ -49,8 +49,8 @@ export default function Home() {
         <div className="home__main-overlay"></div>
         <div className="home__catalogues">
           <SkeletonTheme
-            color="#1a1919"
-            baseColor="#1a1919"
+            color="#0aa1dd"
+            baseColor="#0aa1dd"
             highlightColor="#222121"
           >
             {/* {regressionData.length ? (

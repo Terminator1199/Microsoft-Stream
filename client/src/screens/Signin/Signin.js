@@ -1,5 +1,6 @@
 import React from "react";
 // import { TextField } from "@mui/material";
+import brandLogo from "../../assets/navbar/logo.png";
 import { Form, Button } from "react-bootstrap";
 import useInput from "../../hooks/use-input";
 import { loggedInActions } from "../../store/loginAuth-slice";
@@ -89,19 +90,23 @@ export default function Signin() {
       password: enteredPassword,
     });
   };
-  // function myFunction() {
-  //   var x = document.getElementById("app__navbar");
-  //     x.style.display = "none";
-  // }
-  // myFunction();
+
   return (
-  
     <div className="signin__body">
+      <div className="signin__logo">
+        <Link to="/">
+          <div className="app__navbar-brand ">
+            <img src={brandLogo} alt="Microsoft Stream" />
+          </div>
+        </Link>
+      </div>
       <div className="signin__container flex__center">
         <div className="landing-overlay overlay"></div>
         <div className="signin__form-wrapper flex__center">
           <form className="signin__form" onSubmit={formSubmitHandler}>
-            <h1 className="signin__form-header mb-4"><b>Sign In</b></h1>
+            <h1 className="signin__form-header mb-4">
+              <b>Sign In</b>
+            </h1>
 
             <Form.Floating className="mb-3">
               <Form.Control
@@ -125,7 +130,7 @@ export default function Signin() {
                 onBlur={emailBlurHandler}
               />
               <label htmlFor="floatingInputCustom">Email address</label>
-            </Form.Floating >
+            </Form.Floating>
             <Form.Floating className="mb-3">
               <Form.Control
                 id="floatingPasswordCustom"
