@@ -26,26 +26,18 @@ const NAV_LINKS = [
     icon: <HomeIcon />,
     name: "Home",
   },
-  {
-    icon: <TheatersIcon />,
-    name: "Movie",
-  },
-  {
-    icon: <TheaterComedy />,
-    name: "Drama",
-  },
   // {
-  //   icon: <MusicVideoIcon />,
-  //   name: "Music Video",
+  //   icon: <TheatersIcon />,
+  //   name: "Movie",
   // },
   // {
-  //   icon: <LiveTvIcon />,
-  //   name: "Live Show",
+  //   icon: <TheaterComedy />,
+  //   name: "Drama",
   // },
-  {
-    icon: <AirplayIcon />,
-    name: "Comedies",
-  },
+  // {
+  //   icon: <AirplayIcon />,
+  //   name: "Comedies",
+  // },
 ];
 
 export default function Navbar() {

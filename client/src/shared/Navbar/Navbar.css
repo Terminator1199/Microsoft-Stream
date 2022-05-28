@@ -1,3 +1,6 @@
+:root {
+  --theme: #0aa1dd;
+}
 .app__navbar-container {
   width: 100%;
   position: fixed;
@@ -29,7 +32,7 @@
 }
 .app__navbar-auth {
   cursor: pointer;
-  background-color: var(--color-red);
+  background-color: var(--theme);
   padding: 8px 20px;
   border-radius: 4px;
   margin-left: 20px;

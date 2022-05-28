@@ -11,7 +11,7 @@ export default function Landing() {
         <div className="landing-hero">
           <p className="text__subtitle landing__hero-top">
             {" "}
-            Welcome to <span> Smart</span> flix
+            Welcome to <span> Microsoft Stream</span>
           </p>
 
           <h1 className="header__one">Download Unlimited</h1>

@@ -89,68 +89,75 @@ export default function Signin() {
       password: enteredPassword,
     });
   };
-
+  // function myFunction() {
+  //   var x = document.getElementById("app__navbar");
+  //     x.style.display = "none";
+  // }
+  // myFunction();
   return (
-    <div className="signin__container flex__center">
-      <div className="landing-overlay overlay"></div>
-      <div className="signin__form-wrapper flex__center">
-        <form className="signin__form" onSubmit={formSubmitHandler}>
-          <h1 className="signin__form-header mb-4">Signin</h1>
+  
+    <div className="signin__body">
+      <div className="signin__container flex__center">
+        <div className="landing-overlay overlay"></div>
+        <div className="signin__form-wrapper flex__center">
+          <form className="signin__form" onSubmit={formSubmitHandler}>
+            <h1 className="signin__form-header mb-4"><b>Sign In</b></h1>
 
-          <Form.Floating className="mb-3">
-            <Form.Control
-              id="floatingInputNameCustom"
-              type="text"
-              placeholder="username"
-              onChange={nameChangeHandler}
-              value={enteredName}
-              onBlur={nameBlurHandler}
-            />
-            <label htmlFor="floatingInputCustom">username</label>
-          </Form.Floating>
+            <Form.Floating className="mb-3">
+              <Form.Control
+                id="floatingInputNameCustom"
+                type="text"
+                placeholder="Username"
+                onChange={nameChangeHandler}
+                value={enteredName}
+                onBlur={nameBlurHandler}
+              />
+              <label htmlFor="floatingInputCustom">Username</label>
+            </Form.Floating>
 
-          <Form.Floating className="mb-3">
-            <Form.Control
-              id="floatingInputEmailCustom"
-              type="email"
-              placeholder="name@example.com"
-              onChange={emailChangeHandler}
-              value={enteredEmail}
-              onBlur={emailBlurHandler}
-            />
-            <label htmlFor="floatingInputCustom">Email address</label>
-          </Form.Floating>
-          <Form.Floating>
-            <Form.Control
-              id="floatingPasswordCustom"
-              type="password"
-              placeholder="Password"
-              onChange={passwordChangeHandler}
-              value={enteredPassword}
-              onBlur={passwordBlurHandler}
-            />
-            <label htmlFor="floatingPasswordCustom">Password</label>
-          </Form.Floating>
-          <Form.Group
-            className="mb-3 signin__remember-me"
-            id="formGridCheckbox"
-          >
-            <Form.Check type="checkbox" label="Check me out" />
-            <Link to="#">Need Help ?</Link>
-          </Form.Group>
-          <Button
-            variant="primary"
-            size="lg"
-            className="signin__form-btn"
-            type="submit"
-          >
-            Signin
-          </Button>
+            <Form.Floating className="mb-3">
+              <Form.Control
+                id="floatingInputEmailCustom"
+                type="email"
+                placeholder="name@example.com"
+                onChange={emailChangeHandler}
+                value={enteredEmail}
+                onBlur={emailBlurHandler}
+              />
+              <label htmlFor="floatingInputCustom">Email address</label>
+            </Form.Floating >
+            <Form.Floating className="mb-3">
+              <Form.Control
+                id="floatingPasswordCustom"
+                type="password"
+                placeholder="Password"
+                onChange={passwordChangeHandler}
+                value={enteredPassword}
+                onBlur={passwordBlurHandler}
+              />
+              <label htmlFor="floatingPasswordCustom">Password</label>
+            </Form.Floating>
+            <Form.Group
+              className="mb-3 signin__remember-me"
+              id="formGridCheckbox"
+            >
+              <Form.Check type="checkbox" label="Remember me " />
+              <Link to="#">Need Help ?</Link>
+            </Form.Group>
+            <Button
+              variant="primary"
+              size="lg"
+              className="signin__form-btn"
+              type="submit"
+            >
+              Sign In
+            </Button>
 
-          <div className="signin__form-bottom ">
-            New to Smartflix ? <Link to="#">Signup now</Link>
-          </div>
-        </form>
+            <div className="signin__form-bottom ">
+              New to Microsoft Stream ? <Link to="#">Sign Up now</Link>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
