@@ -14,15 +14,18 @@ export default function MovieSearch() {
   const [searchResults, setSearchResults] = useState([]);
 
   const submitSearchHandler = async () => {
-    const sugggestionRes = await fetch("http://localhost:8000/movie/search", {
-      method: "POST",
-      body: JSON.stringify({
-        name: movie,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const sugggestionRes = await fetch(
+      "http://localhost:8000/api/movie/search",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          name: movie,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const data = await sugggestionRes.json();
 

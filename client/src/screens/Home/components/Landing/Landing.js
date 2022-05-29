@@ -24,15 +24,15 @@ export default function Landing() {
           </p>
           <div className="landing-nav ">
             <div className="landing-nav-left">
-              <div className="landing-nav-phcode flex__center col-2">+880</div>
+              {/* <div className="landing-nav-phcode flex__center col-2">+91</div> */}
               {/* <span></span> */}
               <input
                 className="landing-nav-phno col-5"
-                placeholder="Enter mobie number"
+                placeholder="Email or Phone Number "
               ></input>
             </div>
             <a href="/subscribe" className="flex__center nav__submit-link ">
-              Subscribe
+              Join Now
             </a>
           </div>
         </div>

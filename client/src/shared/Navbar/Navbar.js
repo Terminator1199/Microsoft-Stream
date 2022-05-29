@@ -89,15 +89,18 @@ export default function Navbar() {
 
   const submitSearchHandler = async () => {
     setActive(true);
-    const sugggestionRes = await fetch("http://localhost:8000/movie/search", {
-      method: "POST",
-      body: JSON.stringify({
-        name: searchInputRef.current.value,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const sugggestionRes = await fetch(
+      "http://localhost:8000/api/movie/search",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          name: searchInputRef.current.value,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const sugggestionResData = await sugggestionRes.json();
 

@@ -27,6 +27,7 @@ export default function RowItemCard({ id, name, data }) {
   const clickHandler = () => {
     dispatch(modelActions.setShowModelState());
     dispatch(modelActions.setModelMovieData(data));
+    
   };
   const movieData = useSelector((state) => {
     return {
@@ -47,7 +48,7 @@ export default function RowItemCard({ id, name, data }) {
           <div className="rowitemcard__img">
             <LazyLoadImage
               effect="blur"
-              src={imgSrc}
+              src={imgSrc} 
               alt={name}
               width="250px"
               height="300px"

@@ -1,9 +1,11 @@
 .app__moviesearch {
+  /* width: 100%; */
   min-height: 100vh;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   align-items: flex-start;
+  /* padding: 0; */
 }
 .app__moviesearch-header {
   justify-self: flex-start;
@@ -12,6 +14,10 @@
 }
 .app__moviesearch-header h1 {
   font-size: 1.6rem;
+}
+.container {
+  padding: 0px;
+  margin: 0px;
 }
 .app__moviesearch-container {
   margin-top: 10%;
@@ -24,5 +30,6 @@
   justify-self: flex-start;
 }
 .app__moviesearch-content {
+  margin-left: 0px;
   width: 100%;
 }

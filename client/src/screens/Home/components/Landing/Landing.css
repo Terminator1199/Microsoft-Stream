@@ -83,7 +83,7 @@ h1 {
 }
 .nav__submit-link {
   font-size: 1.1rem;
-
+  width: 32%;
   background-color: var(--theme);
   color: white !important;
   height: 100%;
