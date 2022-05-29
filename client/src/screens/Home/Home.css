@@ -20,8 +20,10 @@
     rgba(0, 0, 56, 0.9) 92.94%
   );
 }
-.home__title__video {
-  top: -100px;
+.home__title__video iframe {
+  /* position: absolute; */
+  margin-top: 50px;
+  /* top: -100px; */
 }
 .home__catalogues {
   top: -50px;

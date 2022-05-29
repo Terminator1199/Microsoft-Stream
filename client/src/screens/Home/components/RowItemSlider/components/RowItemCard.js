@@ -4,45 +4,16 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import loadImg from "../../../../../assets/Home/catalogue/download.jfif";
 import { getImageData } from "../../../../../Api/Api";
 import "./RowItemCard.css";
-
-export default function RowItemCard({ id, name }) {
+import { modelActions } from "../../../../../store/movieModel-slice";
+import { useDispatch, useSelector } from "react-redux";
+export default function RowItemCard({ id, name, data }) {
   const [imgSrc, setImgSrc] = useState();
-  // useEffect(() => {
-  //   const fetchRes = async () => {
-  //     const res = fetch(
-  //       "https://image.tmdb.org/t/p/w500/hOhjRNpkqttyQkMMJubFzjcjqxQ.jpg",
-  //       {
-  //         headers: {
-  //           "Access-Control-Allow-Origin": "*",
-  //         },
-  //       }
-  //     );
-
-  //     console.log("in row cards", await res);
-  //   };
-  //   fetchRes();
-  // }, []);
-  // function checkImage(imageSrc, good, bad) {
-  //   var img = new Image();
-  //   img.onload = good;
-  //   img.onerror = bad;
-  //   img.src = imageSrc;
-  // }
-
-  // checkImage(
-  //   img,
-  //   function () {
-  //     console.log(`good ${name}`);
-  //   },
-  //   function () {
-  //     console.log(`bad ${name}`);
-  //   }
-  // );
-
+  const dispatch = useDispatch();
   useEffect(() => {
     const fetchImg = async () => {
       const movieData = await getImageData(id);
-
+      data.poster_path = movieData.movie_results[0].poster_path;
+      data.backdrop_path = movieData.movie_results[0].backdrop_path;
       if (movieData.movie_results.length > 0) {
         setImgSrc(
           (prev) =>
@@ -53,12 +24,22 @@ export default function RowItemCard({ id, name }) {
 
     fetchImg();
   }, [id, name]);
-
+  const clickHandler = () => {
+    dispatch(modelActions.setShowModelState());
+    dispatch(modelActions.setModelMovieData(data));
+  };
+  const movieData = useSelector((state) => {
+    return {
+      show_model: state.showModel.show_model,
+      model_data: state.showModel.movieData,
+    };
+  });
   return (
     <React.Fragment>
       {typeof imgSrc !== undefined ? (
         <div
           className="rowitemcard__container"
+          onClick={clickHandler}
           // style={{
           //   display: `${typeof imgSrc === "undefined" ? "none" : "block"}`,
           // }}

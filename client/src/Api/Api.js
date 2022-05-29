@@ -25,12 +25,15 @@ export const getImageData = async (id) => {
   return await imgRes.json();
 };
 
-// function trailer_url(title){
-//   const videoData=await fetch(
+// export async function trailer_url(title) {
+//   const videoRes = await fetch(
 //     `https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyD1usMS7TpTDqP9apsERdvopjOSTeejpaI&type=video&q=${title}`
 //   );
+//   return await videoRes.json();
 //   // videoData.json();
-//   console.log(videoData);
-//   // const videoUrl=`https://www.youtube.com/embed/${videoData.items[0].id.videoId}`;
+
+//   // const videoUrl = `https://www.youtube.com/embed/${videoData.items[0].id.videoId}`;
+//   // console.log.apply(videoUrl);
 //   // return videoUrl;
 // }
+//  trailer_url() export;

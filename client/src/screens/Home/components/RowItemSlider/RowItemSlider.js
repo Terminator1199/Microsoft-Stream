@@ -63,6 +63,7 @@ export default function RowItemSlider(props) {
               // return movie.poster_path ? (
               return (
                 <RowItemCard
+                  data={movie}
                   key={uuidv4()}
                   id={movie.imdbId || movie.imdb_id}
                   name={movie.title}

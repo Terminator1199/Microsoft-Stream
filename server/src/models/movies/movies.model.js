@@ -1,3 +1,4 @@
+const movieDetail = require("./movies.mongo");
 const fs = require("fs");
 const { parse } = require("csv-parse");
 const path = require("path");
@@ -29,7 +30,43 @@ const getSearchedMovie = async (searchQuery) => {
   //     return searchResults;
   //   });
 };
+const getMovieComments = async (movie_id, user_id) => {
+  try {
+    return await movieDetail.find({ movie_id: String(movie_id) });
+  } catch (err) {
+    console.log(`Could not find movie reviews ${err}`);
+  }
+};
 
+const postMovieComment = async (movie_id, user_id, user_review) => {
+  const commentObj = {
+    user_id,
+    ...user_review.comments,
+  };
+
+  try {
+    await movieDetail.updateOne(
+      {
+        movie_id: String(movie_id),
+      },
+      {
+        title: user_review.title,
+        $push: {
+          comments: commentObj,
+        },
+      },
+      {
+        upsert: true,
+      }
+    );
+  } catch (err) {
+    console.log(`Could not save user data ${err}`);
+  }
+
+  return commentObj;
+};
 module.exports = {
   getSearchedMovie,
+  getMovieComments,
+  postMovieComment,
 };

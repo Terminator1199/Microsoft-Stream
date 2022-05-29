@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { SkeletonTheme } from "react-loading-skeleton";
 import { getImageData } from "../../Api/Api";
 import "./Home.css";
-
+import { trailer_url } from "../../Api/Api";
 export default function Home() {
   const [regressionData, setRegressionData] = useState([]);
   const [contentData, setContentData] = useState([]);
@@ -40,6 +40,13 @@ export default function Home() {
     );
   }, [userId]);
 
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     console.log(await trailer_url("Harry Potter"));
+  //   };
+  //   fetchData();
+  // }, []);
+
   return (
     <div className="home__container">
       {/* <div className="home__landing">
@@ -47,9 +54,9 @@ export default function Home() {
       </div> */}
       <div className="home__title__video flex__center">
         <iframe
-          width="1060"
-          height="615"
-          src="https://www.youtube.com/embed/2Vv-BfVoq4g"
+          width="100%"
+          height="715"
+          src="https://www.youtube.com/embed/aWzlQ2N6qqg"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -64,7 +71,6 @@ export default function Home() {
             baseColor="#0aa1dd"
             highlightColor="#222121"
           >
-
             {regressionData.length > 0 && (
               <RowItemSlider header="Regression Based" data={regressionData} />
             )}
@@ -81,7 +87,6 @@ export default function Home() {
             {itemCollab.length > 0 && (
               <RowItemSlider header="Item Collabrative" data={itemCollab} />
             )}
-
           </SkeletonTheme>
         </div>
       </div>

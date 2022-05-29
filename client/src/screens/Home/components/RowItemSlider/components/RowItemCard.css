@@ -8,16 +8,17 @@
   background: green;
   /* flex: 0 0 19.7%; */
   text-align: center;
-  margin: 0 15px;
+  margin: 0 8px;
   transition: transform 300ms ease 100ms;
 }
-.rowitemcard__container:hover  {
+.rowitemcard__container:hover {
   transform: translateX(-25%);
 }
 .rowitemcard__img:hover ~ .rowitemcard__img {
   transform: translateX(25%);
 }
 .rowitemcard__img:hover {
+  /* z-index: 1000000; */
   transform: scale(1.5) !important;
 }
 .rowitemcard__img {

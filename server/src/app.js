@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use("/auth", userRouter);
 app.use("/recommendation", recRouter);
-app.use("/movie", movieRouter);
+app.use("/api/movie", movieRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello world");
