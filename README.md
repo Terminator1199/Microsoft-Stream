@@ -63,11 +63,11 @@ A web streaming app with smart movie recommendation system.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
-  1.`git clone https://github.com/priyank003/Smartflix.git`<br/>
+  1.`git clone https://github.com/Terminator1199/Microsoft-Stream.git`<br/>
   <br/>
   2. cd ./client & npm install & npm start  <br/>
   <br/>
-  3.  cd ./rec-engine & npm install & npm start  <br/>
+  3.  cd ./recommendatoin engine & npm install & npm start  <br/>
   <br/>
   4. cd ./server & npm install & npm run watch  <br/>
   <br/>
