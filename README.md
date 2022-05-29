@@ -58,6 +58,15 @@ A web streaming app with smart movie recommendation system.
  
 
 <br/>
+## Tech Stack
+<li>Redux & React</li>
+
+<li>Javascript</li>
+<li>Nodejs</li>
+<li>Express</li>
+
+<li>MongoDb</li>
+
 
 ## Instructions
 
