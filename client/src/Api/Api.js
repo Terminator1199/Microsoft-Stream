@@ -24,3 +24,13 @@ export const getImageData = async (id) => {
   );
   return await imgRes.json();
 };
+
+// function trailer_url(title){
+//   const videoData=await fetch(
+//     `https://www.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyD1usMS7TpTDqP9apsERdvopjOSTeejpaI&type=video&q=${title}`
+//   );
+//   // videoData.json();
+//   console.log(videoData);
+//   // const videoUrl=`https://www.youtube.com/embed/${videoData.items[0].id.videoId}`;
+//   // return videoUrl;
+// }

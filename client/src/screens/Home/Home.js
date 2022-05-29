@@ -42,8 +42,19 @@ export default function Home() {
 
   return (
     <div className="home__container">
-      <div className="home__landing">
+      {/* <div className="home__landing">
         <Landing />
+      </div> */}
+      <div className="home__title__video flex__center">
+        <iframe
+          width="1060"
+          height="615"
+          src="https://www.youtube.com/embed/2Vv-BfVoq4g"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
       <div className="home__main">
         <div className="home__main-overlay"></div>
@@ -53,68 +64,6 @@ export default function Home() {
             baseColor="#0aa1dd"
             highlightColor="#222121"
           >
-            {/* {regressionData.length ? (
-              <RowItemSlider header="Regression Based" data={regressionData} />
-            ) : (
-              [...Array(5)].map(() => (
-                <Skeleton
-                  key={uuidv4()}
-                  duration={0.7}
-                  width={250}
-                  height={300}
-                  style={{ marginRight: "15px" }}
-                />
-              ))
-            )}
-            {contentData.length ? (
-              <RowItemSlider
-                header="Content based on Pirates of carebian"
-                data={contentData}
-              />
-            ) : (
-              [...Array(5)].map(() => (
-                <Skeleton
-                  key={uuidv4()}
-                  duration={0.7}
-                  width={250}
-                  height={300}
-                  style={{ marginRight: "15px" }}
-                />
-              ))
-            )}
-            {userCollab.length ? (
-              <RowItemSlider header="User Collabrative" data={userCollab} />
-            ) : (
-              [...Array(5)].map(() => (
-                <Skeleton
-                  key={uuidv4()}
-                  duration={0.7}
-                  width={250}
-                  height={300}
-                  style={{ marginRight: "15px" }}
-                />
-              ))
-            )}
-            {itemCollab.length ? (
-              <RowItemSlider header="Item Collabrative" data={itemCollab} />
-            ) : (
-              [...Array(5)].map(() => (
-                <Skeleton
-                  key={uuidv4()}
-                  duration={0.7}
-                  width={250}
-                  height={300}
-                  style={{ marginRight: "15px" }}
-                />
-              ))
-            )} */}
-            {/* <RowItemSlider header="Regression Based" data={regressionData} />
-            <RowItemSlider
-              header="Content based on Pirates of carebian"
-              data={contentData}
-            />
-            <RowItemSlider header="User Collabrative" data={userCollab} />
-            <RowItemSlider header="Item Collabrative" data={itemCollab} /> */}
 
             {regressionData.length > 0 && (
               <RowItemSlider header="Regression Based" data={regressionData} />
@@ -133,62 +82,6 @@ export default function Home() {
               <RowItemSlider header="Item Collabrative" data={itemCollab} />
             )}
 
-            {/* {regressionData ? (
-              <RowItemSlider header="Regression Based" data={regressionData} />
-            ) : (
-              [...Array(5)].map(() => (
-                <Skeleton
-                  key={uuidv4()}
-                  duration={0.7}
-                  width={250}
-                  height={300}
-                  style={{ marginRight: "15px" }}
-                />
-              ))
-            )}
-            {contentData ? (
-              <RowItemSlider
-                header="Content based on Pirates of carebian"
-                data={contentData}
-              />
-            ) : (
-              [...Array(5)].map(() => (
-                <Skeleton
-                  key={uuidv4()}
-                  duration={0.7}
-                  width={250}
-                  height={300}
-                  style={{ marginRight: "15px" }}
-                />
-              ))
-            )}
-
-            {userCollab ? (
-              <RowItemSlider header="User Collabrative" data={userCollab} />
-            ) : (
-              [...Array(5)].map(() => (
-                <Skeleton
-                  key={uuidv4()}
-                  duration={0.7}
-                  width={250}
-                  height={300}
-                  style={{ marginRight: "15px" }}
-                />
-              ))
-            )}
-            {itemCollab ? (
-              <RowItemSlider header="Item Collabrative" data={itemCollab} />
-            ) : (
-              [...Array(5)].map(() => (
-                <Skeleton
-                  key={uuidv4()}
-                  duration={0.7}
-                  width={250}
-                  height={300}
-                  style={{ marginRight: "15px" }}
-                />
-              ))
-            )} */}
           </SkeletonTheme>
         </div>
       </div>

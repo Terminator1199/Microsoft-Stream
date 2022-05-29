@@ -6,7 +6,7 @@
   height: 300px;
   position: absolute;
   /* z-index: 10; */
-  top: -200px;
+  /* top: -200px; */
   /* background: linear-gradient(
     180deg,
     rgb(10, 7, 11, 0) 0%,
@@ -20,12 +20,15 @@
     rgba(0, 0, 56, 0.9) 92.94%
   );
 }
+.home__title__video {
+  top: -100px;
+}
 .home__catalogues {
   top: -50px;
   z-index: 20;
   position: absolute;
   width: 100%;
-  padding: 0 50px;
+  padding: 0 10px;
 }
 .home__catalogues p {
   color: white !important;
